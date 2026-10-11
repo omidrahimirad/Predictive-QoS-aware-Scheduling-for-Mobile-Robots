@@ -1,0 +1,14 @@
+scenario:
+  load: 1.5
+  blockage_db: 22.0
+data_dir: data/training-v1
+model_dir: models/v1
+split:
+  train: [1000, 12]
+  validation: [2000, 4]
+  test: [3000, 4]
+selection:
+  urgencies: [2.0, 4.0]
+  horizons: [4, 16]
+  floors: [0.8, 0.9, 1.0]
+  primary_floor: 0.9

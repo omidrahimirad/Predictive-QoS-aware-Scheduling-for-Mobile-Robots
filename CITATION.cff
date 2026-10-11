@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite this software if you use its implementation or generated experiments."
+type: software
+title: "Predictive QoS-aware Scheduling for Mobile Robots"
+version: 0.1.0
+authors:
+  - name: "Project contributors"
+repository-code: "https://github.com/omidrahimirad/Predictive-QoS-aware-Scheduling-for-Mobile-Robots"
+license: MIT
+abstract: "Independent synthetic NR-inspired research simulator for causal prediction-assisted deadline-aware resource allocation."
