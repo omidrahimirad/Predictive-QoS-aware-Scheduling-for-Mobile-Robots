@@ -2,3 +2,4 @@
 examples/verified_run/**/figures/*.svg -whitespace linguist-generated=true
 # Preserve the exact historical source patch, including blank context-line prefixes.
 examples/verified_run/full/full-launch-to-current.patch -whitespace
+examples/robust_scheduling_v2/**/figures/*.svg -whitespace linguist-generated=true

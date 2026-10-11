@@ -58,6 +58,10 @@ class Observation:
     average_rate: tuple[float, ...]
     forecast: tuple[tuple[float, ...], ...] | None = None
     forecast_age: int = 0
+    observed_db: tuple[float, ...] = ()
+    measurement_slot: int = -1
+    forecast_db: tuple[float, ...] = ()
+    feature_shift: tuple[float, ...] = ()
 
 
 @dataclass(frozen=True)

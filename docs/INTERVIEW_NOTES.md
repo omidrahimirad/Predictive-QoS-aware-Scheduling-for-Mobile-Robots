@@ -1,5 +1,10 @@
 # Defensible interview notes
 
+For the v0.2 robustness extension, see [robust scheduling](ROBUST_SCHEDULING.md)
+and the [new evaluation protocol](EXPERIMENT_PROTOCOL.md). Historical numerical
+results below remain preserved and are labeled as prior evidence.
+
+
 **What is the research question?**
 I test whether a causal channel forecast helps schedule queued control packets
 before their deadlines. I compare it with classical and strong reactive methods.

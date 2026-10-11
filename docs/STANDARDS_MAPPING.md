@@ -1,5 +1,10 @@
 # Standards and research mapping
 
+For the v0.2 robustness extension, see [robust scheduling](ROBUST_SCHEDULING.md)
+and the [new evaluation protocol](EXPERIMENT_PROTOCOL.md). Historical numerical
+results below remain preserved and are labeled as prior evidence.
+
+
 Primary-source access date: 11 October 2026. Versions below are pinned references,
 not a claim to use the newest revisions. Clauses were checked in the linked ETSI
 documents. No copyrighted standard PDFs or MCS tables are redistributed.

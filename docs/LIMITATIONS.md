@@ -1,5 +1,10 @@
 # Scientific limitations
 
+For the v0.2 robustness extension, see [robust scheduling](ROBUST_SCHEDULING.md)
+and the [new evaluation protocol](EXPERIMENT_PROTOCOL.md). Historical numerical
+results below remain preserved and are labeled as prior evidence.
+
+
 This software studies a scheduling hypothesis in a synthetic model. It does not
 certify industrial wireless reliability or closed-loop robot safety.
 

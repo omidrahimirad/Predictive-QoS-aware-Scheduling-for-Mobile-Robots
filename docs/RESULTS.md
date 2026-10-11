@@ -1,5 +1,10 @@
 # Measured results
 
+For the v0.2 robustness extension, see [robust scheduling](ROBUST_SCHEDULING.md)
+and the [new evaluation protocol](EXPERIMENT_PROTOCOL.md). Historical numerical
+results below remain preserved and are labeled as prior evidence.
+
+
 The full main campaign completed **2,730 episode-policy runs**: 12 ID conditions
 and one OOD condition, seven allocators, 30 independent episodes per condition.
 The same 30 seed families are reused across conditions; 2,730 is a run count,

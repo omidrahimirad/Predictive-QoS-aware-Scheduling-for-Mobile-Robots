@@ -5,25 +5,46 @@ from pathlib import Path
 
 from pqos.config import load_config
 from pqos.experiments.reporting import report
+from pqos.experiments.robust import develop, evaluate_robust, freeze
+from pqos.experiments.robust_reporting import report_robust
 from pqos.experiments.runner import evaluate, generate_dataset, train
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description="Synthetic predictive QoS scheduling research")
     sub = parser.add_subparsers(dest="command", required=True)
-    for name in ("generate", "train", "demo", "evaluate", "ablate"):
+    for name in (
+        "generate",
+        "train",
+        "demo",
+        "evaluate",
+        "ablate",
+        "robust-develop",
+        "robust-freeze",
+        "robust-evaluate",
+    ):
         command = sub.add_parser(name)
         command.add_argument("--config", required=True)
-        if name in {"evaluate", "ablate"}:
+        if name in {"evaluate", "ablate", "robust-evaluate"}:
             command.add_argument("--profile", choices=["quick", "full"], default="quick")
     command = sub.add_parser("report")
     command.add_argument("--run-dir", required=True)
+    command = sub.add_parser("robust-report")
+    command.add_argument("--run-dir", required=True)
     args = parser.parse_args()
-    if args.command == "report":
+    if args.command == "robust-report":
+        path = report_robust(Path(args.run_dir))
+    elif args.command == "report":
         path = report(Path(args.run_dir))
     else:
         config = load_config(args.config)
-        if args.command == "generate":
+        if args.command == "robust-develop":
+            path = develop(config)
+        elif args.command == "robust-freeze":
+            path = freeze(config)
+        elif args.command == "robust-evaluate":
+            path = evaluate_robust(config, args.profile)
+        elif args.command == "generate":
             path = generate_dataset(config)
         elif args.command == "train":
             path = train(config)

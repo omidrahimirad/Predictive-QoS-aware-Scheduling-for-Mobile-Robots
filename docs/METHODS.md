@@ -1,5 +1,10 @@
 # Methods
 
+For the v0.2 robustness extension, see [robust scheduling](ROBUST_SCHEDULING.md)
+and the [new evaluation protocol](EXPERIMENT_PROTOCOL.md). Historical numerical
+results below remain preserved and are labeled as prior evidence.
+
+
 ## Model and units
 
 One downlink cell serves 12 moving UEs by default. Slot duration is 0.5 ms; each

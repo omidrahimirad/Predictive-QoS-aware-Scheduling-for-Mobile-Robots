@@ -25,6 +25,7 @@ def simulate(
     forecasts: np.ndarray | None = None,
     diagnostic_oracle: bool = False,
     keep_timeline: bool = False,
+    reliability_inputs: dict[str, np.ndarray] | None = None,
 ) -> SimulationResult:
     if trace.service.shape != (s.slots, s.n_ues):
         raise ValueError("trace/scenario shape mismatch")
@@ -37,7 +38,7 @@ def simulate(
     window_bits = np.zeros((s.n_ues, 2))
     timings = []
     timeline = []
-    attempts = failures = used = wasted = 0
+    attempts = failures = used = wasted = retry_attempts = 0
     occupancies = []
     hol = []
     observed_service = capacity(trace.observed_db, s)
@@ -141,6 +142,7 @@ def simulate(
             if forecasts.shape != (s.slots, s.n_ues, 16):
                 raise ValueError("forecast shape mismatch")
             forecast = forecasts[t]
+        reliability = reliability_inputs or {}
         observation = Observation(
             t,
             s.resources,
@@ -150,6 +152,10 @@ def simulate(
             tuple(demands),
             tuple(average),
             tuple(tuple(row) for row in forecast) if forecast is not None else None,
+            observed_db=tuple(trace.observed_db[t]),
+            measurement_slot=max(t - s.observation_delay, 0),
+            forecast_db=tuple(reliability["forecast_db"][t]) if reliability else (),
+            feature_shift=tuple(reliability["feature_shift"][t]) if reliability else (),
         )
         begin = time.perf_counter()
         allocation = scheduler.allocate(observation)
@@ -181,6 +187,7 @@ def simulate(
                     if success:
                         physical_completions.setdefault(t + 1, []).append(attempt_chunk)
                     attempts += 1
+                    retry_attempts += 1
                     failures += int(not success)
                     budget -= amount
                     if c.bits == 0:
@@ -193,6 +200,7 @@ def simulate(
                     if success:
                         physical_completions.setdefault(t + 1, []).append(c)
                     attempts += 1
+                    retry_attempts += 1
                     failures += int(not success)
                     budget -= amount
         if s.warmup <= t < s.warmup + s.duration:
@@ -203,6 +211,10 @@ def simulate(
             timeline.append(
                 {
                     "slot": t,
+                    "confidence": getattr(scheduler, "confidence", float("nan")),
+                    "risk": getattr(scheduler, "risk", float("nan")),
+                    "fallback": int(getattr(scheduler, "used_fallback", False)),
+                    "residual_db": max(getattr(scheduler, "residuals", [float("nan")])),
                     "sinr_db": float(trace.sinr_db[t, 0]),
                     "observed_service": float(observed_service[t, 0]),
                     "predicted_service": float(forecast[0, -1])
@@ -234,11 +246,14 @@ def simulate(
         "unresolved_bits": unresolved,
         "resource_utilization": used / (s.duration * s.resources),
         "chunk_attempts": attempts,
+        "retry_chunk_attempts": retry_attempts,
         "failed_chunk_attempts": failures,
         "mean_queue_bits": float(np.mean(occupancies)),
         "mean_hol_ms": float(np.mean(hol)) * s.slot_seconds * 1000,
         "expired_delivered_bits": expired_waste,
         "late_feedback_waste_bits": wasted,
         "fallbacks": scheduler.fallbacks,
+        "fallback_frequency": scheduler.fallbacks / s.slots,
+        "residual_updates": getattr(scheduler, "residual_updates", 0),
     }
     return SimulationResult(summarize(packets, s, window_bits, timings, extra), packets, timeline)

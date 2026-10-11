@@ -70,3 +70,12 @@ GitHub Actions started automatically; consult the [live CI history](https://gith
 for the outcome of each published commit. Local verification above remains distinct
 from remote CI. The original sibling specification was preserved; public provenance
 copies normalize personal absolute paths.
+
+## v0.2 robustness extension — pre-evaluation state
+
+Historical evidence above remains unchanged. The robustness extension adds a causal
+observable-residual monitor, training-feature envelope and global Predictive/EDF gate.
+New disjoint split ranges and the eight-condition protocol are in
+[EXPERIMENT_PROTOCOL](docs/EXPERIMENT_PROTOCOL.md). Development selected threshold
+2.5; the .9-of-PF aggregate BE floor was infeasible for all candidates. Final evaluation
+has not been executed at this pre-evaluation revision. A clean-source freeze is required.
