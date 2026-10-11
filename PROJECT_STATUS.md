@@ -62,7 +62,11 @@ not secretly implemented or claimed outcomes.
 
 ## Publication state
 
-**Local commits only. No push, no pull request, no remote GitHub CI execution.**
-Remote: the user-specified GitHub repository. Publication requires the user's subsequent
-instruction. The original sibling specification was preserved; public provenance copies
-normalize personal absolute paths.
+**Published to the user-specified GitHub repository on `main` on 11 October 2026,
+after explicit user authorization.** The initial remote commit was
+`3abfbabb5123d8e55022e5b21fac9dc8b10e841e`; the remote default branch and commit
+were verified after pushing. No pull request was created for this initial publication.
+GitHub Actions started automatically; consult the [live CI history](https://github.com/omidrahimirad/Predictive-QoS-aware-Scheduling-for-Mobile-Robots/actions)
+for the outcome of each published commit. Local verification above remains distinct
+from remote CI. The original sibling specification was preserved; public provenance
+copies normalize personal absolute paths.

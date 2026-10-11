@@ -90,7 +90,10 @@ does not measure end-to-end robotic control or support safety/reliability certif
 No real-world dataset, formal optimality proof, or duration-convergence study is claimed.
 Main campaign runtime was approximately 479.6 seconds on the recorded machine,
 using four workers. Other jobs were running; scheduler timings are descriptive,
-not isolated universal benchmarks. GitHub CI and remote publication have not run.
+not isolated universal benchmarks. These experiments were verified locally before
+remote publication. The repository was subsequently published on `main` on
+11 October 2026; remote CI status is available in the
+[live CI history](https://github.com/omidrahimirad/Predictive-QoS-aware-Scheduling-for-Mobile-Robots/actions).
 
 See [full campaign provenance](../examples/verified_run/full/PROVENANCE.md) for the
 report-only empty-table repair made after that campaign was launched.

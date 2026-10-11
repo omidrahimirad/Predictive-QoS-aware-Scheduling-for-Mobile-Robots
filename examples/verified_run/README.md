@@ -16,4 +16,6 @@ report-only source repair is documented in full/PROVENANCE.md.
 
 Run manifests preserve actual Git/source/model state at launch. Some development
 runs honestly record an unborn commit or dirty state; that is not rewritten as a
-published release. GitHub CI and publication have not been performed.
+published release. The repository was subsequently published on `main` on
+11 October 2026; see [publication status](../../PROJECT_STATUS.md) and the
+[live CI history](https://github.com/omidrahimirad/Predictive-QoS-aware-Scheduling-for-Mobile-Robots/actions).
