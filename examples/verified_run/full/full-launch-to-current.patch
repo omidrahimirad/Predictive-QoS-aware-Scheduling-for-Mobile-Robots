@@ -1,0 +1,32 @@
+--- a/src/pqos/experiments/statistics.py
++++ b/src/pqos/experiments/statistics.py
+@@ -34,7 +34,10 @@
+                     "ci_high": high,
+                 }
+             )
+-    return pd.DataFrame(rows)
++    return pd.DataFrame(
++        rows,
++        columns=["scenario", "policy", "metric", "n_episodes", "mean", "std", "ci_low", "ci_high"],
++    )
+ 
+ 
+ def paired_comparisons(frame: pd.DataFrame) -> pd.DataFrame:
+@@ -64,4 +67,16 @@
+                         "ci_high": high * multiplier,
+                     }
+                 )
+-    return pd.DataFrame(rows)
++    return pd.DataFrame(
++        rows,
++        columns=[
++            "scenario",
++            "comparison",
++            "metric",
++            "unit",
++            "n_pairs",
++            "difference",
++            "ci_low",
++            "ci_high",
++        ],
++    )

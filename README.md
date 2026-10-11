@@ -89,8 +89,9 @@ deadlines. Drain traffic does not inflate measurement-window goodput.
 
 The compact [example bundle](examples/verified_run/) contains actual configurations,
 manifests, metrics, reports, and figures. See [RESULTS](docs/RESULTS.md) for the measured
-findings and [research report](docs/RESEARCH_REPORT.md) for context. The example uses
-four independent episodes per condition and is exploratory, not a reliability certification.
+findings and [research report](docs/RESEARCH_REPORT.md) for context. The bundle includes
+quick studies with four episodes and a full main study with 30 episodes per condition.
+Neither constitutes a reliability certification.
 
 ## Checks
 

@@ -1,0 +1,15 @@
+{
+  "analysis_seed": 771,
+  "bootstrap_repetitions": 10000,
+  "comparisons": [],
+  "metrics": [
+    "control_violation",
+    "be_goodput_mbps",
+    "jain_fairness",
+    "latency_p99_ms"
+  ],
+  "n_episode_policy_runs": 1,
+  "profile": "quick",
+  "statistical_unit": "independent episode",
+  "status": "complete"
+}

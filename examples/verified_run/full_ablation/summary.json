@@ -1,0 +1,1216 @@
+{
+  "analysis_seed": 771,
+  "bootstrap_repetitions": 10000,
+  "comparisons": [
+    {
+      "ci_high": 0.0069444444444447155,
+      "ci_low": -0.2083333333333348,
+      "comparison": "predictive - reactive",
+      "difference": -0.09722222222222268,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.004856781249999893,
+      "ci_low": -0.008276335416666876,
+      "comparison": "predictive - reactive",
+      "difference": -0.0016128333333335003,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0002553474275125895,
+      "ci_low": -0.00032575331425351863,
+      "comparison": "predictive - reactive",
+      "difference": -3.1650877235171274e-05,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.01749999999999998,
+      "ci_low": -0.26500416666666643,
+      "comparison": "predictive - reactive",
+      "difference": -0.1228333333333335,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.46527777777777635,
+      "ci_low": -0.01388888888888881,
+      "comparison": "predictive - edf",
+      "difference": 0.21527777777777696,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.014169404166666656,
+      "ci_low": -0.036222016666666565,
+      "comparison": "predictive - edf",
+      "difference": -0.010928416666666626,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0010965177529504086,
+      "ci_low": -0.0007770753032263454,
+      "comparison": "predictive - edf",
+      "difference": 9.318010678739385e-05,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.9063374999999989,
+      "ci_low": 0.32983333333333287,
+      "comparison": "predictive - edf",
+      "difference": 0.600333333333332,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -2.0763888888888875,
+      "ci_low": -4.027777777777778,
+      "comparison": "predictive - pf",
+      "difference": -2.993055555555556,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": -0.15108180416666636,
+      "ci_low": -0.41637670624999995,
+      "comparison": "predictive - pf",
+      "difference": -0.2695919999999999,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.003633649281879034,
+      "ci_low": -0.011225549599401845,
+      "comparison": "predictive - pf",
+      "difference": -0.006968161579121372,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -2.5828208333333316,
+      "ci_low": -3.608175000000001,
+      "comparison": "predictive - pf",
+      "difference": -3.099000000000002,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0069444444444447155,
+      "ci_low": -0.2083333333333348,
+      "comparison": "predictive - persistence",
+      "difference": -0.09722222222222268,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.004856781249999893,
+      "ci_low": -0.008276335416666876,
+      "comparison": "predictive - persistence",
+      "difference": -0.0016128333333335003,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0002553474275125895,
+      "ci_low": -0.00032575331425351863,
+      "comparison": "predictive - persistence",
+      "difference": -3.1650877235171274e-05,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.01749999999999998,
+      "ci_low": -0.26500416666666643,
+      "comparison": "predictive - persistence",
+      "difference": -0.1228333333333335,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.10416666666666703,
+      "ci_low": -0.06944444444444542,
+      "comparison": "predictive - oracle",
+      "difference": 0.013888888888888968,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.0023433520833337873,
+      "ci_low": -0.020864927083333252,
+      "comparison": "predictive - oracle",
+      "difference": -0.007601416666666398,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0004589001829542705,
+      "ci_low": -0.0003835806287730707,
+      "comparison": "predictive - oracle",
+      "difference": 3.969414424061698e-05,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.2716708333333333,
+      "ci_low": 0.05049583333333472,
+      "comparison": "predictive - oracle",
+      "difference": 0.15900000000000128,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "delay-8",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.15277777777777776,
+      "ci_low": -0.041840277777778524,
+      "comparison": "predictive - reactive",
+      "difference": 0.04861111111111142,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.013960437500000061,
+      "ci_low": -0.0027534458333332078,
+      "comparison": "predictive - reactive",
+      "difference": 0.004897916666666843,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.00047390346554694346,
+      "ci_low": -0.0001935119363983473,
+      "comparison": "predictive - reactive",
+      "difference": 0.00012192587638366244,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.13965416666666955,
+      "ci_low": -0.5748458333333355,
+      "comparison": "predictive - reactive",
+      "difference": -0.340166666666668,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.2152777777777772,
+      "ci_low": -0.11111111111111133,
+      "comparison": "predictive - edf",
+      "difference": 0.0555555555555543,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.03122437916666704,
+      "ci_low": -0.00851668958333326,
+      "comparison": "predictive - edf",
+      "difference": 0.010876416666666817,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0010588605966785369,
+      "ci_low": -0.00014561484241656328,
+      "comparison": "predictive - edf",
+      "difference": 0.00044378989463043456,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.7166708333333324,
+      "ci_low": 0.2779958333333328,
+      "comparison": "predictive - edf",
+      "difference": 0.48866666666666764,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -2.041666666666666,
+      "ci_low": -4.076388888888889,
+      "comparison": "predictive - pf",
+      "difference": -3.013888888888889,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": -0.15646068333333324,
+      "ci_low": -0.42220720208333307,
+      "comparison": "predictive - pf",
+      "difference": -0.2777186666666664,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.00362060260804055,
+      "ci_low": -0.011901070942328394,
+      "comparison": "predictive - pf",
+      "difference": -0.007371463521518007,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -2.563483333333332,
+      "ci_low": -3.580345833333335,
+      "comparison": "predictive - pf",
+      "difference": -3.0843333333333334,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.15277777777777776,
+      "ci_low": -0.041840277777778524,
+      "comparison": "predictive - persistence",
+      "difference": 0.04861111111111142,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.013960437500000061,
+      "ci_low": -0.0027534458333332078,
+      "comparison": "predictive - persistence",
+      "difference": 0.004897916666666843,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.00047390346554694346,
+      "ci_low": -0.0001935119363983473,
+      "comparison": "predictive - persistence",
+      "difference": 0.00012192587638366244,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.13965416666666955,
+      "ci_low": -0.5748458333333355,
+      "comparison": "predictive - persistence",
+      "difference": -0.340166666666668,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.21527777777777682,
+      "ci_low": -0.0833333333333333,
+      "comparison": "predictive - oracle",
+      "difference": 0.05555555555555497,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.01226199375000022,
+      "ci_low": 0.0007423499999999319,
+      "comparison": "predictive - oracle",
+      "difference": 0.006109250000000089,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.000429459244214881,
+      "ci_low": -0.0007025708663122051,
+      "comparison": "predictive - oracle",
+      "difference": -5.985671355387412e-05,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.08616666666666703,
+      "ci_low": -0.12866666666666804,
+      "comparison": "predictive - oracle",
+      "difference": -0.027666666666666135,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "id-0",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0486111111111109,
+      "ci_low": -0.20833333333333445,
+      "comparison": "predictive - reactive",
+      "difference": -0.08333333333333345,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.014130458333333231,
+      "ci_low": -0.03756323541666668,
+      "comparison": "predictive - reactive",
+      "difference": -0.009622666666666705,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0002661399078964981,
+      "ci_low": -0.001115462880184906,
+      "comparison": "predictive - reactive",
+      "difference": -0.00041828870353349443,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.1414999999999974,
+      "ci_low": -0.6325083333333323,
+      "comparison": "predictive - reactive",
+      "difference": -0.36099999999999866,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.29861111111110994,
+      "ci_low": -0.17361111111111163,
+      "comparison": "predictive - edf",
+      "difference": 0.055555555555555705,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.015406679166666656,
+      "ci_low": -0.025993552083333486,
+      "comparison": "predictive - edf",
+      "difference": -0.004385666666666784,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0007590066244626602,
+      "ci_low": -0.0006248381254343332,
+      "comparison": "predictive - edf",
+      "difference": 8.147713782400794e-05,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 1.4913333333333327,
+      "ci_low": 0.6191666666666671,
+      "comparison": "predictive - edf",
+      "difference": 1.0258333333333345,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.9513888888888887,
+      "ci_low": -2.194444444444444,
+      "comparison": "predictive - pf",
+      "difference": -1.5555555555555565,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": -0.14177238124999986,
+      "ci_low": -0.5370870958333331,
+      "comparison": "predictive - pf",
+      "difference": -0.3220324999999998,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.0014689373222413467,
+      "ci_low": -0.005910660700311213,
+      "comparison": "predictive - pf",
+      "difference": -0.0036158798174150465,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -2.0529916666666668,
+      "ci_low": -3.0353374999999954,
+      "comparison": "predictive - pf",
+      "difference": -2.545999999999999,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0486111111111109,
+      "ci_low": -0.20833333333333445,
+      "comparison": "predictive - persistence",
+      "difference": -0.08333333333333345,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.014130458333333231,
+      "ci_low": -0.03756323541666668,
+      "comparison": "predictive - persistence",
+      "difference": -0.009622666666666705,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0002661399078964981,
+      "ci_low": -0.001115462880184906,
+      "comparison": "predictive - persistence",
+      "difference": -0.00041828870353349443,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.1414999999999974,
+      "ci_low": -0.6325083333333323,
+      "comparison": "predictive - persistence",
+      "difference": -0.36099999999999866,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.2777777777777787,
+      "ci_low": -0.06250000000000008,
+      "comparison": "predictive - oracle",
+      "difference": 0.09027777777777866,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.01175315416666654,
+      "ci_low": -0.04857246874999991,
+      "comparison": "predictive - oracle",
+      "difference": -0.015387916666666494,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.000700387071952097,
+      "ci_low": -0.0007903436325536101,
+      "comparison": "predictive - oracle",
+      "difference": 2.1146989908715773e-05,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.294004166666667,
+      "ci_low": -0.02034166666666723,
+      "comparison": "predictive - oracle",
+      "difference": 0.12850000000000034,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "noise-4",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.20138888888889023,
+      "ci_low": -2.402777777777776,
+      "comparison": "predictive - reactive",
+      "difference": -1.0763888888888886,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.5302873354166668,
+      "ci_low": 0.12573607083333346,
+      "comparison": "predictive - reactive",
+      "difference": 0.32319091666666677,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.0013462608025260482,
+      "ci_low": -0.010832317725534071,
+      "comparison": "predictive - reactive",
+      "difference": -0.005790044780397511,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0,
+      "ci_low": -0.07066666666666747,
+      "comparison": "predictive - reactive",
+      "difference": -0.028666666666667003,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 7.701388888888889,
+      "ci_low": 3.319444444444445,
+      "comparison": "predictive - edf",
+      "difference": 5.618055555555556,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 2.3268004666666666,
+      "ci_low": 1.21040721875,
+      "comparison": "predictive - edf",
+      "difference": 1.7395469999999997,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.034158277191216266,
+      "ci_low": -0.08940507808018432,
+      "comparison": "predictive - edf",
+      "difference": -0.05992500198214123,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 1.4815291666666661,
+      "ci_low": 0.38547083333333243,
+      "comparison": "predictive - edf",
+      "difference": 0.8975000000000004,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 2.639062499999996,
+      "ci_low": -1.708333333333332,
+      "comparison": "predictive - pf",
+      "difference": 0.45138888888888834,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": -3.802603033333334,
+      "ci_low": -4.564175425,
+      "comparison": "predictive - pf",
+      "difference": -4.170997083333333,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.01880848541945864,
+      "ci_low": -0.0056845667049766945,
+      "comparison": "predictive - pf",
+      "difference": 0.00665892147054342,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.2551666666666664,
+      "ci_low": -0.01150833333333321,
+      "comparison": "predictive - pf",
+      "difference": 0.11300000000000014,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.20138888888889023,
+      "ci_low": -2.402777777777776,
+      "comparison": "predictive - persistence",
+      "difference": -1.0763888888888886,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.5302873354166668,
+      "ci_low": 0.12573607083333346,
+      "comparison": "predictive - persistence",
+      "difference": 0.32319091666666677,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.0013462608025260482,
+      "ci_low": -0.010832317725534071,
+      "comparison": "predictive - persistence",
+      "difference": -0.005790044780397511,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0,
+      "ci_low": -0.07066666666666747,
+      "comparison": "predictive - persistence",
+      "difference": -0.028666666666667003,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.7291666666666671,
+      "ci_low": -1.7777777777777761,
+      "comparison": "predictive - oracle",
+      "difference": -0.4930555555555551,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.5926883770833334,
+      "ci_low": 0.23960231250000025,
+      "comparison": "predictive - oracle",
+      "difference": 0.4177658333333335,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.00020324727499657132,
+      "ci_low": -0.006807782689083764,
+      "comparison": "predictive - oracle",
+      "difference": -0.0031897388406023778,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.20099999999999904,
+      "ci_low": 0.010666666666666439,
+      "comparison": "predictive - oracle",
+      "difference": 0.09733333333333286,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "ood-layout-speed",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.2569444444444436,
+      "ci_low": -0.1388888888888891,
+      "comparison": "predictive - reactive",
+      "difference": 0.027777777777777974,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.009580566666666445,
+      "ci_low": -0.01713664791666653,
+      "comparison": "predictive - reactive",
+      "difference": -0.0027859166666666844,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0005472805839203032,
+      "ci_low": -0.0004822868877131944,
+      "comparison": "predictive - reactive",
+      "difference": 5.307553800375509e-05,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.11832916666666614,
+      "ci_low": -0.35899999999999654,
+      "comparison": "predictive - reactive",
+      "difference": -0.23533333333333248,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.33333333333333204,
+      "ci_low": -0.04166666666666941,
+      "comparison": "predictive - edf",
+      "difference": 0.13888888888888762,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.04851923541666656,
+      "ci_low": 0.0027933562499999004,
+      "comparison": "predictive - edf",
+      "difference": 0.02400316666666657,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0013964026879060777,
+      "ci_low": -0.0004273993008968502,
+      "comparison": "predictive - edf",
+      "difference": 0.00048039720920566297,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.8730250000000014,
+      "ci_low": 0.3153249999999994,
+      "comparison": "predictive - edf",
+      "difference": 0.5791666666666677,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -1.9444444444444426,
+      "ci_low": -3.7987847222222237,
+      "comparison": "predictive - pf",
+      "difference": -2.8472222222222223,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": -0.14769222083333322,
+      "ci_low": -0.4085707374999998,
+      "comparison": "predictive - pf",
+      "difference": -0.2649306666666666,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.003119558217072196,
+      "ci_low": -0.011208116314552792,
+      "comparison": "predictive - pf",
+      "difference": -0.0067214157296005845,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -2.4011624999999963,
+      "ci_low": -3.492016666666666,
+      "comparison": "predictive - pf",
+      "difference": -2.961166666666665,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.2569444444444436,
+      "ci_low": -0.1388888888888891,
+      "comparison": "predictive - persistence",
+      "difference": 0.027777777777777974,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.009580566666666445,
+      "ci_low": -0.01713664791666653,
+      "comparison": "predictive - persistence",
+      "difference": -0.0027859166666666844,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0005472805839203032,
+      "ci_low": -0.0004822868877131944,
+      "comparison": "predictive - persistence",
+      "difference": 5.307553800375509e-05,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.11832916666666614,
+      "ci_low": -0.35899999999999654,
+      "comparison": "predictive - persistence",
+      "difference": -0.23533333333333248,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.36111111111110966,
+      "ci_low": -0.09722222222222372,
+      "comparison": "predictive - oracle",
+      "difference": 0.09027777777777699,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.020461235416666786,
+      "ci_low": -0.0004802708333332819,
+      "comparison": "predictive - oracle",
+      "difference": 0.008872916666666756,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0009805851704079984,
+      "ci_low": -0.0004555945976791903,
+      "comparison": "predictive - oracle",
+      "difference": 0.00025756863268971606,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.17133750000000228,
+      "ci_low": -0.0021666666666646816,
+      "comparison": "predictive - oracle",
+      "difference": 0.0761666666666675,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "smooth",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.31944444444444425,
+      "ci_low": -0.07638888888888731,
+      "comparison": "predictive - reactive",
+      "difference": 0.1111111111111117,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.01755059791666693,
+      "ci_low": -0.010070662499999924,
+      "comparison": "predictive - reactive",
+      "difference": 0.0038996666666667678,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0004588425194578441,
+      "ci_low": -0.0007468355503621381,
+      "comparison": "predictive - reactive",
+      "difference": -0.00011645138423850657,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.18916249999999832,
+      "ci_low": -0.682174999999999,
+      "comparison": "predictive - reactive",
+      "difference": -0.41866666666666474,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.38888888888888834,
+      "ci_low": 0.013888888888889377,
+      "comparison": "predictive - edf",
+      "difference": 0.2013888888888886,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.047105602083333,
+      "ci_low": 0.0035842208333330917,
+      "comparison": "predictive - edf",
+      "difference": 0.0232879166666665,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.001112896325404287,
+      "ci_low": -0.00022964942086462018,
+      "comparison": "predictive - edf",
+      "difference": 0.00043815564514064763,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 1.2556708333333346,
+      "ci_low": 0.6343250000000004,
+      "comparison": "predictive - edf",
+      "difference": 0.9300000000000012,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -2.2638888888888875,
+      "ci_low": -3.9305555555555567,
+      "comparison": "predictive - pf",
+      "difference": -3.0555555555555562,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": -0.20090666458333328,
+      "ci_low": -0.4444498812500001,
+      "comparison": "predictive - pf",
+      "difference": -0.31294875000000005,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.004644158028593139,
+      "ci_low": -0.013083840566921053,
+      "comparison": "predictive - pf",
+      "difference": -0.008528014300710448,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -2.822654166666662,
+      "ci_low": -3.809504166666666,
+      "comparison": "predictive - pf",
+      "difference": -3.316666666666663,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.31944444444444425,
+      "ci_low": -0.07638888888888731,
+      "comparison": "predictive - persistence",
+      "difference": 0.1111111111111117,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.01755059791666693,
+      "ci_low": -0.010070662499999924,
+      "comparison": "predictive - persistence",
+      "difference": 0.0038996666666667678,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0004588425194578441,
+      "ci_low": -0.0007468355503621381,
+      "comparison": "predictive - persistence",
+      "difference": -0.00011645138423850657,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": -0.18916249999999832,
+      "ci_low": -0.682174999999999,
+      "comparison": "predictive - persistence",
+      "difference": -0.41866666666666474,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.5069444444444426,
+      "ci_low": 0.06250000000000107,
+      "comparison": "predictive - oracle",
+      "difference": 0.2638888888888892,
+      "metric": "control_violation",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "percentage points"
+    },
+    {
+      "ci_high": 0.015550131249999911,
+      "ci_low": -0.00508163541666677,
+      "comparison": "predictive - oracle",
+      "difference": 0.004710000000000036,
+      "metric": "be_goodput_mbps",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.0004993108964475322,
+      "ci_low": -0.0009111969213643688,
+      "comparison": "predictive - oracle",
+      "difference": -0.00016551607409412972,
+      "metric": "jain_fairness",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    },
+    {
+      "ci_high": 0.15566666666666631,
+      "ci_low": -0.03033333333333131,
+      "comparison": "predictive - oracle",
+      "difference": 0.060666666666667445,
+      "metric": "latency_p99_ms",
+      "n_pairs": 30,
+      "scenario": "surprise",
+      "unit": "native metric units"
+    }
+  ],
+  "metrics": [
+    "control_violation",
+    "be_goodput_mbps",
+    "jain_fairness",
+    "latency_p99_ms"
+  ],
+  "n_episode_policy_runs": 2160,
+  "profile": "full",
+  "statistical_unit": "independent episode",
+  "status": "complete"
+}

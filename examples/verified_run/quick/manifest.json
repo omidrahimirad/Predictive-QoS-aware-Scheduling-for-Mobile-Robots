@@ -1,0 +1,245 @@
+{
+  "ablation": false,
+  "completed_utc": "2026-10-11T09:47:43.850715+00:00",
+  "config": {
+    "model_dir": "models/v1",
+    "profiles": {
+      "full": {
+        "episodes": 30,
+        "grid": {
+          "blockage_db": [
+            18.0,
+            28.0
+          ],
+          "load": [
+            0.5,
+            1.5,
+            3.0
+          ],
+          "speed": [
+            1.0,
+            4.0
+          ]
+        },
+        "seed_start": 3000
+      },
+      "quick": {
+        "episodes": 4,
+        "grid": {
+          "blockage_db": [
+            22.0
+          ],
+          "load": [
+            0.5,
+            1.5,
+            3.0
+          ],
+          "speed": [
+            1.0
+          ]
+        },
+        "seed_start": 3000
+      }
+    },
+    "results_dir": "results",
+    "scenario": {
+      "blockage_db": 22.0,
+      "load": 1.5
+    }
+  },
+  "definition_hash": "f1288528243f7544364f8155d79006c10b9d130b98ba5682bc57c178d0380bd1",
+  "demo": false,
+  "environment": {
+    "dependencies": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.4",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1"
+    },
+    "git_commit": "6ca68e56046f139bcf6eaeb65432dd63778623ff",
+    "git_dirty": false,
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "python": "3.12.10"
+  },
+  "episodes": 112,
+  "model_hash": "791c994ea25beedf560908bea2006b6dadebf7b3b001079eb37fe8afa124a837",
+  "policies": [
+    "rr",
+    "pf",
+    "edf",
+    "reactive",
+    "persistence",
+    "predictive",
+    "oracle"
+  ],
+  "policy": {
+    "horizon": 4,
+    "opportunity": 1.0,
+    "urgency": 2.0
+  },
+  "profile": "quick",
+  "runtime_seconds": 49.725683917000424,
+  "scenarios": {
+    "id-0": {
+      "bandwidth_hz": 360000.0,
+      "be_bits": 12000,
+      "be_rate": 0.035,
+      "blockage_db": 22.0,
+      "buffer_bits": 240000,
+      "control_bits": 2048,
+      "control_period": 20,
+      "deadline": 20,
+      "drain": 40,
+      "duration": 800,
+      "error_free": false,
+      "eta_max": 6.0,
+      "feedback_delay": 2,
+      "history": 8,
+      "layout": 0,
+      "load": 0.5,
+      "max_attempts": 3,
+      "n_ues": 12,
+      "observation_delay": 2,
+      "observation_noise_db": 0.8,
+      "observation_quantization_db": 0.0,
+      "overhead_efficiency": 0.75,
+      "resources": 24,
+      "slot_seconds": 0.0005,
+      "speed": 1.0,
+      "surprise_rate": 0.0008,
+      "warmup": 100
+    },
+    "id-1": {
+      "bandwidth_hz": 360000.0,
+      "be_bits": 12000,
+      "be_rate": 0.035,
+      "blockage_db": 22.0,
+      "buffer_bits": 240000,
+      "control_bits": 2048,
+      "control_period": 20,
+      "deadline": 20,
+      "drain": 40,
+      "duration": 800,
+      "error_free": false,
+      "eta_max": 6.0,
+      "feedback_delay": 2,
+      "history": 8,
+      "layout": 0,
+      "load": 1.5,
+      "max_attempts": 3,
+      "n_ues": 12,
+      "observation_delay": 2,
+      "observation_noise_db": 0.8,
+      "observation_quantization_db": 0.0,
+      "overhead_efficiency": 0.75,
+      "resources": 24,
+      "slot_seconds": 0.0005,
+      "speed": 1.0,
+      "surprise_rate": 0.0008,
+      "warmup": 100
+    },
+    "id-2": {
+      "bandwidth_hz": 360000.0,
+      "be_bits": 12000,
+      "be_rate": 0.035,
+      "blockage_db": 22.0,
+      "buffer_bits": 240000,
+      "control_bits": 2048,
+      "control_period": 20,
+      "deadline": 20,
+      "drain": 40,
+      "duration": 800,
+      "error_free": false,
+      "eta_max": 6.0,
+      "feedback_delay": 2,
+      "history": 8,
+      "layout": 0,
+      "load": 3.0,
+      "max_attempts": 3,
+      "n_ues": 12,
+      "observation_delay": 2,
+      "observation_noise_db": 0.8,
+      "observation_quantization_db": 0.0,
+      "overhead_efficiency": 0.75,
+      "resources": 24,
+      "slot_seconds": 0.0005,
+      "speed": 1.0,
+      "surprise_rate": 0.0008,
+      "warmup": 100
+    },
+    "ood-layout-speed": {
+      "bandwidth_hz": 360000.0,
+      "be_bits": 12000,
+      "be_rate": 0.035,
+      "blockage_db": 28,
+      "buffer_bits": 240000,
+      "control_bits": 2048,
+      "control_period": 20,
+      "deadline": 20,
+      "drain": 40,
+      "duration": 800,
+      "error_free": false,
+      "eta_max": 6.0,
+      "feedback_delay": 2,
+      "history": 8,
+      "layout": 1,
+      "load": 2.5,
+      "max_attempts": 3,
+      "n_ues": 12,
+      "observation_delay": 2,
+      "observation_noise_db": 0.8,
+      "observation_quantization_db": 0.0,
+      "overhead_efficiency": 0.75,
+      "resources": 24,
+      "slot_seconds": 0.0005,
+      "speed": 6.0,
+      "surprise_rate": 0.0008,
+      "warmup": 100
+    }
+  },
+  "schema": 1,
+  "seeds": [
+    3000,
+    3001,
+    3002,
+    3003
+  ],
+  "selected_predictor": "tree",
+  "source_hash": "dd0b81488436f7c3d2497f3079919641f2a2da8f040f350fdaec131ae02de3df",
+  "split_manifest": {
+    "test": [
+      3000,
+      3001,
+      3002,
+      3003
+    ],
+    "train": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004,
+      1005,
+      1006,
+      1007,
+      1008,
+      1009,
+      1010,
+      1011
+    ],
+    "validation": [
+      2000,
+      2001,
+      2002,
+      2003
+    ]
+  },
+  "started_utc": "2026-10-11T09:46:54.254223+00:00",
+  "status": "complete",
+  "units": {
+    "goodput": "Mbit/s",
+    "latency": "ms",
+    "time": "slots"
+  }
+}

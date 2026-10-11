@@ -268,6 +268,32 @@ def test_feature_prefix_causality():
     np.testing.assert_array_equal(before[:50], after[:50])
 
 
+def test_future_trace_mutation_cannot_change_earlier_decisions():
+    from pqos.prediction.models import persistence_forecast
+
+    s = Scenario(duration=60, warmup=10, n_ues=2, resources=3)
+    first = generate(s, 3000)
+    second = generate(s, 3000)
+    cutoff = 30
+    second.sinr_db[cutoff:] = -1000
+    second.service[cutoff:] = 0
+    second.observed_db[cutoff:] = -1000
+    second.arrivals[cutoff:] = 0
+    decisions = []
+
+    class Recorder(GreedyScheduler):
+        def allocate(self, observation):
+            allocation = super().allocate(observation)
+            decisions.append(allocation.counts)
+            return allocation
+
+    simulate(s, first, Recorder("predictive"), persistence_forecast(first, s))
+    prefix = decisions[:cutoff].copy()
+    decisions.clear()
+    simulate(s, second, Recorder("predictive"), persistence_forecast(second, s))
+    assert prefix == decisions[:cutoff]
+
+
 def test_trace_serialization_and_split_overlap(tmp_path):
     s = Scenario(duration=80, n_ues=2)
     trace = generate(s, 1000)

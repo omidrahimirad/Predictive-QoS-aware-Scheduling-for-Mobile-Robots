@@ -1,0 +1,5 @@
+ci_high,ci_low,mean,metric,n_episodes,policy,scenario,std
+0.0270833333333333,0.0270833333333333,0.0270833333333333,control_violation,1,predictive,id-0,
+16.1561875,16.1561875,16.1561875,be_goodput_mbps,1,predictive,id-0,
+0.8866197785537231,0.8866197785537231,0.8866197785537231,jain_fairness,1,predictive,id-0,
+3.5,3.5,3.5,latency_p99_ms,1,predictive,id-0,

@@ -1,0 +1,81 @@
+ci_high,ci_low,comparison,difference,metric,n_pairs,scenario,unit
+0.0,-0.15625000000000516,predictive - reactive,-0.052083333333335056,control_violation,4,id-0,percentage points
+0.01201624999999984,-0.00020062499999973227,predictive - reactive,0.0039343750000000455,be_goodput_mbps,4,id-0,native metric units
+0.0006410359916539099,-2.1426528845069903e-06,predictive - reactive,0.00021525330030519596,jain_fairness,4,id-0,native metric units
+0.0,0.0,predictive - reactive,0.0,latency_p99_ms,4,id-0,native metric units
+0.0,-0.15624999999999736,predictive - edf,-0.052083333333332454,control_violation,4,id-0,percentage points
+0.007401249999999804,-0.008104999999999585,predictive - edf,-0.0010499999999999954,be_goodput_mbps,4,id-0,native metric units
+0.0007919147133406412,-0.0008664722842340877,predictive - edf,-0.00010702594121705933,jain_fairness,4,id-0,native metric units
+0.3712500000000034,-0.16499999999999915,predictive - edf,0.06875000000000142,latency_p99_ms,4,id-0,native metric units
+0.10416666666666752,-1.093750000000007,predictive - pf,-0.5729166666666698,control_violation,4,id-0,percentage points
+0.034098124999999646,-0.003333749999999913,predictive - pf,0.013273124999999997,be_goodput_mbps,4,id-0,native metric units
+0.0004344855595659891,-0.00046945483057952986,predictive - pf,2.7206818216440887e-05,jain_fairness,4,id-0,native metric units
+-0.28999999999999937,-0.8900000000000083,predictive - pf,-0.5600000000000027,latency_p99_ms,4,id-0,native metric units
+0.0,-0.15625000000000516,predictive - persistence,-0.052083333333335056,control_violation,4,id-0,percentage points
+0.01201624999999984,-0.00020062499999973227,predictive - persistence,0.0039343750000000455,be_goodput_mbps,4,id-0,native metric units
+0.0006410359916539099,-2.1426528845069903e-06,predictive - persistence,0.00021525330030519596,jain_fairness,4,id-0,native metric units
+0.0,0.0,predictive - persistence,0.0,latency_p99_ms,4,id-0,native metric units
+0.0,0.0,predictive - oracle,0.0,control_violation,4,id-0,percentage points
+0.012603124999999604,-2.749999999984709e-05,predictive - oracle,0.00418937499999994,be_goodput_mbps,4,id-0,native metric units
+0.0006001489590688469,-2.1426528845069903e-06,predictive - oracle,0.0002080287391877378,jain_fairness,4,id-0,native metric units
+0.0,0.0,predictive - oracle,0.0,latency_p99_ms,4,id-0,native metric units
+0.15624999999999736,-0.3124999999999947,predictive - reactive,-0.052083333333332454,control_violation,4,id-1,percentage points
+0.00014125000000131394,-0.029148750000000057,predictive - reactive,-0.012869999999999493,be_goodput_mbps,4,id-1,native metric units
+-1.8134619021892284e-05,-0.0010027535101919671,predictive - reactive,-0.0005104440646069297,jain_fairness,4,id-1,native metric units
+-0.12250000000000227,-1.9362500000000016,predictive - reactive,-0.8850000000000052,latency_p99_ms,4,id-1,native metric units
+0.31250000000000255,0.0,predictive - edf,0.15624999999999997,control_violation,4,id-1,percentage points
+-0.0015724999999990885,-0.028411249999999555,predictive - edf,-0.014991874999999322,be_goodput_mbps,4,id-1,native metric units
+0.0006498813879375342,-0.001043757352785668,predictive - edf,-0.0001969379824240669,jain_fairness,4,id-1,native metric units
+0.622500000000002,0.10249999999999204,predictive - edf,0.36249999999999705,latency_p99_ms,4,id-1,native metric units
+-0.36458333333333015,-3.125,predictive - pf,-2.03125,control_violation,4,id-1,percentage points
+-0.11780124999999941,-0.3582312499999989,predictive - pf,-0.23588374999999928,be_goodput_mbps,4,id-1,native metric units
+-0.0049515273237866475,-0.008547778990746602,predictive - pf,-0.006831269536761636,jain_fairness,4,id-1,native metric units
+-3.250000000000001,-4.040000000000006,predictive - pf,-3.7062500000000047,latency_p99_ms,4,id-1,native metric units
+0.15624999999999736,-0.3124999999999947,predictive - persistence,-0.052083333333332454,control_violation,4,id-1,percentage points
+0.00014125000000131394,-0.029148750000000057,predictive - persistence,-0.012869999999999493,be_goodput_mbps,4,id-1,native metric units
+-1.8134619021892284e-05,-0.0010027535101919671,predictive - persistence,-0.0005104440646069297,jain_fairness,4,id-1,native metric units
+-0.12250000000000227,-1.9362500000000016,predictive - persistence,-0.8850000000000052,latency_p99_ms,4,id-1,native metric units
+0.15624999999999736,-0.1562499999999976,predictive - oracle,-8.673617379884035e-17,control_violation,4,id-1,percentage points
+0.010616249999999994,-0.00944312499999933,predictive - oracle,2.8125000000489564e-05,be_goodput_mbps,4,id-1,native metric units
+0.0007994752323709775,-0.0006894250575056882,predictive - oracle,8.824261064568906e-05,jain_fairness,4,id-1,native metric units
+0.0,-0.5962500000000119,predictive - oracle,-0.19875000000000398,latency_p99_ms,4,id-1,native metric units
+0.625000000000011,-0.6249999999999991,predictive - reactive,-0.05208333333332933,control_violation,4,id-2,percentage points
+0.3116506250000004,0.03135124999999839,predictive - reactive,0.16189374999999995,be_goodput_mbps,4,id-2,native metric units
+0.0005603270264141758,-0.00183743470676348,predictive - reactive,-0.0005423699109393942,jain_fairness,4,id-2,native metric units
+-0.12499999999999978,-2.17875,predictive - reactive,-0.8962500000000015,latency_p99_ms,4,id-2,native metric units
+0.20833333333334023,-0.7291666666666627,predictive - edf,-0.20833333333332738,control_violation,4,id-2,percentage points
+0.48085562500000023,0.016293750000000884,predictive - edf,0.20305937500000049,be_goodput_mbps,4,id-2,native metric units
+0.0005171529353902582,-0.0008476379723396654,predictive - edf,-0.00020147921624022458,jain_fairness,4,id-2,native metric units
+4.25,1.9075000000000066,predictive - edf,3.1775000000000024,latency_p99_ms,4,id-2,native metric units
+-5.833333333333333,-8.020833333333325,predictive - pf,-6.9270833333333295,control_violation,4,id-2,percentage points
+-0.3483987500000021,-1.0930706249999993,predictive - pf,-0.6980881250000008,be_goodput_mbps,4,id-2,native metric units
+0.002630462677996992,-0.012770346982300729,predictive - pf,-0.004524893758476201,jain_fairness,4,id-2,native metric units
+-1.9874999999999954,-3.5987499999999955,predictive - pf,-2.652499999999996,latency_p99_ms,4,id-2,native metric units
+0.625000000000011,-0.6249999999999991,predictive - persistence,-0.05208333333332933,control_violation,4,id-2,percentage points
+0.3116506250000004,0.03135124999999839,predictive - persistence,0.16189374999999995,be_goodput_mbps,4,id-2,native metric units
+0.0005603270264141758,-0.00183743470676348,predictive - persistence,-0.0005423699109393942,jain_fairness,4,id-2,native metric units
+-0.12499999999999978,-2.17875,predictive - persistence,-0.8962500000000015,latency_p99_ms,4,id-2,native metric units
+0.20833333333334264,-1.2499999999999998,predictive - oracle,-0.6249999999999974,control_violation,4,id-2,percentage points
+0.1590006250000009,0.04425249999999803,predictive - oracle,0.09885562499999967,be_goodput_mbps,4,id-2,native metric units
+0.0013079723722258518,0.00029729372272227494,predictive - oracle,0.0008089745164293338,jain_fairness,4,id-2,native metric units
+1.1775000000000013,0.10500000000000398,predictive - oracle,0.5962500000000048,latency_p99_ms,4,id-2,native metric units
+0.7812499999999944,-4.999999999999999,predictive - reactive,-2.1354166666666674,control_violation,4,ood-layout-speed,percentage points
+0.6621731249999999,0.07016500000000025,predictive - reactive,0.3403656250000001,be_goodput_mbps,4,ood-layout-speed,native metric units
+0.007985043164462746,-0.028758043900422775,predictive - reactive,-0.010386500367980014,jain_fairness,4,ood-layout-speed,native metric units
+0.0,0.0,predictive - reactive,0.0,latency_p99_ms,4,ood-layout-speed,native metric units
+9.37500000000001,-7.343749999999999,predictive - edf,1.7187500000000022,control_violation,4,ood-layout-speed,percentage points
+5.6597968750000005,2.13886125,predictive - edf,3.6315806250000002,be_goodput_mbps,4,ood-layout-speed,native metric units
+-0.14943839902974337,-0.22773438089487302,predictive - edf,-0.19350921668590293,jain_fairness,4,ood-layout-speed,native metric units
+0.0,0.0,predictive - edf,0.0,latency_p99_ms,4,ood-layout-speed,native metric units
+9.895833333333332,1.249999999999993,predictive - pf,5.6770833333333295,control_violation,4,ood-layout-speed,percentage points
+-2.702469375,-3.7704812500000005,predictive - pf,-3.254361875,be_goodput_mbps,4,ood-layout-speed,native metric units
+0.03322350798582224,-0.012255279928348697,predictive - pf,0.010816969514123531,jain_fairness,4,ood-layout-speed,native metric units
+0.6325000000000003,0.0,predictive - pf,0.31625000000000014,latency_p99_ms,4,ood-layout-speed,native metric units
+0.7812499999999944,-4.999999999999999,predictive - persistence,-2.1354166666666674,control_violation,4,ood-layout-speed,percentage points
+0.6621731249999999,0.07016500000000025,predictive - persistence,0.3403656250000001,be_goodput_mbps,4,ood-layout-speed,native metric units
+0.007985043164462746,-0.028758043900422775,predictive - persistence,-0.010386500367980014,jain_fairness,4,ood-layout-speed,native metric units
+0.0,0.0,predictive - persistence,0.0,latency_p99_ms,4,ood-layout-speed,native metric units
+-0.5208333333333343,-4.9479166666666625,predictive - oracle,-2.8645833333333344,control_violation,4,ood-layout-speed,percentage points
+0.7275200000000002,0.4428462499999999,predictive - oracle,0.585183125,be_goodput_mbps,4,ood-layout-speed,native metric units
+-0.001532532528668279,-0.026674752267982632,predictive - oracle,-0.014103642398325456,jain_fairness,4,ood-layout-speed,native metric units
+0.0,0.0,predictive - oracle,0.0,latency_p99_ms,4,ood-layout-speed,native metric units

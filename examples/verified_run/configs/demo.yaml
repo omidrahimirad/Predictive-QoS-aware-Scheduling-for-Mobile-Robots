@@ -1,0 +1,5 @@
+scenario:
+  load: 1.5
+  blockage_db: 22.0
+model_dir: models/v1
+results_dir: results

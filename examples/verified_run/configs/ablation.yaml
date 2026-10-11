@@ -1,0 +1,16 @@
+scenario:
+  load: 1.5
+  blockage_db: 22.0
+model_dir: models/v1
+results_dir: results
+profiles:
+  quick:
+    episodes: 4
+    seed_start: 3000
+    grid:
+      load: [1.5]
+  full:
+    episodes: 30
+    seed_start: 3000
+    grid:
+      load: [1.5]
