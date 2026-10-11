@@ -1,0 +1,4 @@
+# Matplotlib emits spaces in SVG path commands; they are generated vector assets.
+examples/verified_run/**/figures/*.svg -whitespace linguist-generated=true
+# Preserve the exact historical source patch, including blank context-line prefixes.
+examples/verified_run/full/full-launch-to-current.patch -whitespace
