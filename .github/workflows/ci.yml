@@ -18,10 +18,10 @@ jobs:
       - name: Install locked environment
         run: uv sync --locked --extra dev --python "$(command -v python)"
       - name: Lint
-        run: uv run ruff check src tests
+        run: uv run ruff check src tests scripts
       - name: Formatting
-        run: uv run ruff format --check src tests
-      - name: Check core interface types
+        run: uv run ruff format --check src tests scripts
+      - name: Check core interfaces and robustness modules
         run: uv run mypy
       - name: Unit and isolated train-evaluate-report smoke tests
         run: uv run pytest -q

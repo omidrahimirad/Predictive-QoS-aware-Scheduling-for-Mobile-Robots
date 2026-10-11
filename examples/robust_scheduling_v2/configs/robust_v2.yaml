@@ -1,0 +1,34 @@
+scenario:
+  load: 1.5
+  blockage_db: 22.0
+data_dir: data/robust-v2
+model_dir: models/robust-v2
+results_dir: results/robust-v2
+split:
+  train: [11000, 12]
+  validation: [12000, 4]
+  test: [15000, 1]
+calibration: [13000, 4]
+development: [14000, 3]
+selection:
+  urgencies: [2.0, 4.0]
+  horizons: [4, 16]
+  floors: [0.9]
+  primary_floor: 0.9
+robust:
+  thresholds: [1.5, 2.5, 4.0]
+  shift_scale: 0.1
+  smoothing: 0.05
+  be_floor: 0.9
+scenarios:
+  A-normal: {load: 1.5, blockage_db: 18.0}
+  B-pressure: {load: 3.0, blockage_db: 18.0, deadline: 12}
+  C-blockage: {load: 1.5, blockage_db: 28.0}
+  D-mobility: {load: 1.5, speed: 6.0, blockage_db: 18.0}
+  E-deterioration: {load: 1.5, blockage_db: 28.0, surprise_rate: 0.008}
+  F-layout-shift: {load: 1.5, layout: 1, blockage_db: 22.0}
+  G-measurements: {load: 1.5, observation_delay: 8, observation_noise_db: 4.0}
+  H-combined: {load: 2.5, layout: 1, speed: 6.0, blockage_db: 32.0, surprise_rate: 0.004}
+profiles:
+  quick: {episodes: 2, seed_start: 800000, workers: 4}
+  full: {episodes: 30, seed_start: 900000, workers: 4}

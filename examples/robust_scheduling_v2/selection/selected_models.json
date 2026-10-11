@@ -1,0 +1,56 @@
+{
+  "environment": {
+    "dependencies": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.4",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1"
+    },
+    "git_commit": "bbe5ac39253eeb2328dd54daf6bea59f5bd857e2",
+    "git_dirty": true,
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "python": "3.12.10"
+  },
+  "floor_sensitivity": {
+    "0.9": {
+      "feasible": true,
+      "horizon": 4,
+      "urgency": 2.0
+    }
+  },
+  "model_hash": "c17b7ccc84b968cfcaefa0797fb423ebfca8fa4ef7898736d04779f09298565d",
+  "policy": {
+    "horizon": 4,
+    "opportunity": 1.0,
+    "urgency": 2.0
+  },
+  "runtime_seconds": 18.08538179199968,
+  "schema": 1,
+  "selected": "tree",
+  "split_manifest": {
+    "test": [
+      15000
+    ],
+    "train": [
+      11000,
+      11001,
+      11002,
+      11003,
+      11004,
+      11005,
+      11006,
+      11007,
+      11008,
+      11009,
+      11010,
+      11011
+    ],
+    "validation": [
+      12000,
+      12001,
+      12002,
+      12003
+    ]
+  }
+}

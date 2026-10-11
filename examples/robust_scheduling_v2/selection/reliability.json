@@ -1,0 +1,65 @@
+{
+  "calibration_seeds": [
+    13000,
+    13001,
+    13002,
+    13003
+  ],
+  "config_hash": "b7de965a67f1e750ffcbd1c0d61c207b2bce0916c15a87de6e0bbd8b0edc16d3",
+  "development_pf_be_mbps": 13.234178020833332,
+  "environment": {
+    "dependencies": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.4",
+      "pandas": "2.3.3",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1"
+    },
+    "git_commit": "db21e0ae3d5bb0db210cb570d3f5eb5014dc543b",
+    "git_dirty": false,
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "python": "3.12.10"
+  },
+  "feature_lower": [
+    -5.617842971569062,
+    -5.619046507636339,
+    -5.6207613285625895,
+    -5.621453833586904,
+    -5.627245574643342,
+    -5.6294531011900935,
+    -5.6294531011900935,
+    -5.632247629191584,
+    12.135554301521697,
+    11.955799426458972,
+    -0.999998386344998,
+    -0.9999095658071491,
+    2.0
+  ],
+  "feature_upper": [
+    38.59977171348959,
+    38.59977171348959,
+    38.59502080661422,
+    38.59034119150146,
+    38.59034119150146,
+    38.59034119150146,
+    38.59034119150146,
+    38.58944155627749,
+    27.88545084226432,
+    28.16342380325723,
+    0.9998099579097715,
+    0.9999581452394098,
+    2.0
+  ],
+  "horizon": 4,
+  "observable_error_q90_db": 2.2273413744155848,
+  "residual_scale": 1.1538104324447727,
+  "runtime_seconds": 46.917367500002,
+  "selection_feasible": false,
+  "settings": {
+    "shift_scale": 0.1,
+    "smoothing": 0.05,
+    "threshold": 2.5
+  },
+  "source_hash": "ac16b29780fd1b78a1636edc30dfe568f81bed37d80cd86a737aec99fc9da0e7",
+  "target": "delayed noisy measurement, not hidden future SINR"
+}

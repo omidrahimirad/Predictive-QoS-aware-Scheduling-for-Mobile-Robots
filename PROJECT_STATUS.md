@@ -79,3 +79,29 @@ New disjoint split ranges and the eight-condition protocol are in
 [EXPERIMENT_PROTOCOL](docs/EXPERIMENT_PROTOCOL.md). Development selected threshold
 2.5; the .9-of-PF aggregate BE floor was infeasible for all candidates. Final evaluation
 has not been executed at this pre-evaluation revision. A clean-source freeze is required.
+
+## v0.2 completed local research verification
+
+- Final: **2,160** executions, eight conditions, **30 independent episodes per condition**,
+  nine policies including the integrated fallback ablation. All completed.
+- Exploratory quick: **144** executions, two episodes/condition; development: **96** executions.
+- Frozen revision: `db21e0ae3d5bb0db210cb570d3f5eb5014dc543b`; scientific source hash
+  `ac16b29780fd1b78a1636edc30dfe568f81bed37d80cd86a737aec99fc9da0e7`. No post-final algorithm tuning.
+- `uv run pytest -q`: **67 passed** on Python 3.12.10.
+- `uv run --isolated --python 3.11 --extra dev pytest -q`: **67 passed** on Python 3.11.
+- Ruff lint/format passed, including the supplementary plot script; mypy passed on six
+  modules, including robust scheduler/reliability/orchestration. `uv lock --check` passed.
+- CFF validated against schema 1.2.0 with cffconvert; author is Omid Rahimi.
+- Historical main/ablation manifests and trace pairing verified; 14 representative
+  historical replays match every saved non-timing metric. Historical bundle unchanged.
+- Every v2 payload/control/resource ledger, paired trace, unique episode row and policy
+  equivalence checked. Paired statistics and reports regenerated identically from raw CSV.
+- Six required PNG/SVG figures plus one supplementary deterioration timeline generated.
+- Raw evidence in [examples/robust_scheduling_v2](examples/robust_scheduling_v2/).
+- Aggregate development BE floor was infeasible. EDF remains better under severe blockage;
+  Robust entirely becomes EDF in three shifted conditions. See RESULTS for all outcomes.
+
+Repository description and 11 relevant topics were updated and read back from GitHub.
+Publication of v0.2 and remote CI verification follow the user's explicit instruction;
+consult the [live CI history](https://github.com/omidrahimirad/Predictive-QoS-aware-Scheduling-for-Mobile-Robots/actions)
+for outcomes tied to exact published commits. No full study is run in routine CI.

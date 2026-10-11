@@ -69,3 +69,64 @@ total-power constraints, then cross-check with a more detailed network simulator
 
 Refer to RESULTS and the saved reports for numerical answers. Do not memorize a
 performance improvement that is absent from those actual artifacts.
+
+## Robustness extension: defensible interview answers
+
+**Why did the original predictive scheduler lose under severe blockage?**
+Its urgency and opportunity score remains a heuristic. It can trade deadline protection
+for fairness and BE service, and shifted forecasts can underestimate deterioration.
+Even the oracle score is not an optimal allocator. EDF directly protects urgent demand.
+
+**How does uncertainty-aware fallback work?**
+I keep a forecast until its target's delayed noisy measurement arrives. I update an
+error EWMA, compare current features with a training envelope, and switch the whole
+slot to EDF if the normalized risk exceeds a development-selected threshold.
+The confidence score is a diagnostic, not a calibrated probability.
+
+**How do you prevent prediction-error leakage?**
+I match forecast target timestamps to received measurement timestamps. A forecast of
+t+H cannot update the monitor before t+H+observation_delay. The scheduler receives no
+true future channel. Prefix mutation and delayed-update tests check this behavior.
+
+**Why a new final set?**
+The original test results were already inspected. I used disjoint training, validation,
+calibration, development and new final ranges, then froze code/config/model/calibration
+hashes before final execution. I would need another final set after outcome-driven tuning.
+
+**Why episode bootstrap?**
+Packets and slots within one channel/mobility episode are correlated. I resample matched
+independent episodes for policy differences. Many marginal intervals do not establish
+universal superiority or control the familywise false-positive rate.
+
+**What does OOD measure here?**
+It probes a declared change in synthetic layout, motion, blockage or measurements.
+It does not prove generalization to real factories or arbitrary shifts. A coordinate
+feature envelope can miss important in-envelope changes and flag harmless ones.
+
+**Does this guarantee deadlines?**
+No. It is a switch between two heuristics under finite resources and unpredictable
+errors. EDF itself cannot guarantee delivery when channels or offered traffic make
+it infeasible. The BE floor was infeasible in development, and is not a runtime bound.
+
+**What is the ML contribution?**
+The learned model estimates exogenous future SINR. Classical demand, deadline and PF
+logic still chooses resources. The no-adaptation ablation and pure EDF show whether
+the reliability mechanism helps beyond the original predictor or simply behaves like EDF.
+
+**What is the biggest weakness?**
+The synthetic channel/service family and short episodes limit external validity.
+The private engine also withdraws physically completed queues before ACKs arrive,
+so it is not a full transmitter-only information model. All policies share that
+abstraction, but a deployment study needs an ACK-limited queue view and new campaigns.
+
+**What would you improve before deployment?**
+Measured channels, calibrated MCS/BLER/TBS, longer-run queue studies, runtime power and
+admission constraints, complete feedback semantics, hardware timing, and a robot loop.
+I would validate each assumption before claiming industrial reliability.
+
+**What did the new study actually find?**
+Robust reduced violations relative to Predictive under deterioration by 13.396 pp,
+but reduced BE from 8.061 to 6.311 Mbit/s. In severe blockage it still lost to EDF
+by 7.632 pp. Three shifted conditions used EDF in every slot. A small F-condition
+gain over EDF is conditional evidence with a multiple-comparison caveat. I would
+not describe the study as universally superior ML scheduling.

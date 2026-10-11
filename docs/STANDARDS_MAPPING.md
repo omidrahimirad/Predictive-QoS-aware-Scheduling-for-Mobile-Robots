@@ -58,3 +58,17 @@ downlink transmitter. Application deadlines are not asserted to be standard 5QI 
 
 The project adds a testable implementation hypothesis and comparison pipeline;
 it does not claim that its heuristic is novel in the research literature.
+
+## Robustness research sources
+
+4. A. N. Angelopoulos and S. Bates, *A Gentle Introduction to Conformal Prediction and
+   Distribution-Free Uncertainty Quantification*, 2022 revision,
+   [arXiv:2107.07511v6](https://arxiv.org/abs/2107.07511v6). The project's correlated
+   empirical residual band does not claim these formal guarantees.
+5. scikit-learn, [ExtraTreesRegressor](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.ExtraTreesRegressor.html).
+   Point ensemble regression is used; no uncalibrated tree disagreement is labeled an interval.
+
+The vacancy's ML/resource allocation/statistical focus motivated the extension, not an
+employer assignment. The [official vacancy](https://jobs.fraunhofer.de/job/Berlin-Wissenschaftlerin-6G-Mobilfunk-10587/1445911533/)
+was rechecked on 11 October 2026. 3GPP's [RAN #113 reports](https://www.3gpp.org/news-events/3gpp-news/ran113-reports)
+describe 6G study activity; this project implements neither those studies nor a finalized standard.

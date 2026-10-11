@@ -2,8 +2,11 @@
 
 For the v0.2 robustness extension, see [robust scheduling](ROBUST_SCHEDULING.md)
 and the [new evaluation protocol](EXPERIMENT_PROTOCOL.md). Historical numerical
-results below remain preserved and are labeled as prior evidence.
+results in the original sections remain preserved as prior evidence; the new v0.2
+sections are labeled separately.
 
+
+## Historical v0.1 evidence
 
 The full main campaign completed **2,730 episode-policy runs**: 12 ID conditions
 and one OOD condition, seven allocators, 30 independent episodes per condition.
@@ -124,3 +127,112 @@ for predictive-minus-reactive violations in the full ablations include zero.
 No-position/motion, observation delay/noise, smooth channels, and surprise blockage
 are retained; none was discarded after inspecting results. Per-variant uncertainty
 is in summary_metrics.csv and the [full ablation report](../examples/verified_run/full_ablation/REPORT.md).
+
+## Robustness extension — new final evidence
+
+The v0.2 final campaign completed **2,160 episode-policy executions** across eight
+predeclared conditions, nine policies and **30 independent episodes per condition**.
+Each condition uses disjoint new seeds; matched policies share the same exogenous trace.
+The no-adaptation mechanism ablation is included in these 2,160 runs, not an additional sample.
+A separate two-episode exploratory profile completed 144 runs. Development evaluated 96
+episode-policy executions (three thresholds and PF across 24 independent scenario episodes).
+
+Point model: ExtraTrees; predictive urgency 2, horizon 4; robust threshold 2.5,
+EWMA smoothing .05, feature shift scale .1. Calibration mean observable residual is
+1.154 dB and empirical q90 is 2.227 dB. The aggregate development BE floor was infeasible:
+selected Robust 10.810 versus PF 13.234 Mbit/s, approximately 81.7% of PF.
+
+Frozen code: `db21e0ae3d5bb0db210cb570d3f5eb5014dc543b`. Configuration, source,
+model and calibration fingerprints were frozen before final seeds were executed.
+No algorithm or threshold was changed after inspecting final outcomes.
+
+| Condition | Predictive violation % | Robust violation % | EDF violation % | Robust − Predictive pp [95% CI] | Robust − EDF pp [95% CI] |
+|---|---:|---:|---:|---|---|
+| A-normal | 0.785 | 0.812 | 0.771 | 0.028 [-0.007, 0.069] | 0.042 [-0.007, 0.090] |
+| B-pressure | 2.729 | 2.542 | 2.521 | -0.187 [-0.493, 0.090] | 0.021 [-0.236, 0.299] |
+| C-blockage | 43.583 | 37.757 | 30.125 | -5.826 [-8.292, -3.625] | 7.632 [5.146, 10.486] |
+| D-mobility | 1.056 | 1.028 | 1.028 | -0.028 [-0.132, 0.056] | 0.000 [0.000, 0.000] |
+| E-deterioration | 43.819 | 30.424 | 30.201 | -13.396 [-16.827, -10.083] | 0.222 [-0.819, 1.132] |
+| F-layout-shift | 10.715 | 8.951 | 9.208 | -1.764 [-2.451, -1.111] | -0.257 [-0.486, -0.049] |
+| G-measurements | 7.049 | 6.944 | 6.944 | -0.104 [-0.292, 0.076] | 0.000 [0.000, 0.000] |
+| H-combined | 72.389 | 61.146 | 61.146 | -11.243 [-14.320, -8.215] | 0.000 [0.000, 0.000] |
+
+Differences resample matched independent episodes 10,000 times. Intervals are marginal,
+not corrected for the many comparisons. They are not universal superiority or safety proofs.
+
+### Reliability, throughput and fairness
+
+| Condition | Predictive BE | Robust BE | EDF BE | Robust Jain fairness | Fallback % slots |
+|---|---:|---:|---:|---:|---:|
+| A-normal | 14.545 | 14.540 | 14.536 | 0.933 | 23.5 |
+| B-pressure | 24.445 | 24.414 | 24.417 | 0.882 | 26.6 |
+| C-blockage | 7.812 | 7.154 | 6.205 | 0.698 | 35.5 |
+| D-mobility | 15.013 | 15.007 | 15.007 | 0.934 | 100.0 |
+| E-deterioration | 8.061 | 6.311 | 6.010 | 0.773 | 95.3 |
+| F-layout-shift | 10.630 | 10.490 | 10.498 | 0.828 | 98.0 |
+| G-measurements | 12.528 | 12.502 | 12.502 | 0.878 | 100.0 |
+| H-combined | 4.877 | 2.087 | 2.087 | 0.521 | 100.0 |
+
+BE units are Mbit/s. Severe blockage C: Robust improves against Predictive but remains
+7.632 pp worse than EDF while delivering 7.154 versus EDF 6.205 Mbit/s BE.
+Deterioration E: Robust reduces violations by 13.396 pp versus Predictive while reducing
+BE from 8.061 to 6.311 Mbit/s. It remains close to EDF in violation (difference .222 pp,
+CI including zero), with slightly higher mean BE. In H, a reduction of 11.243 pp
+versus Predictive accompanies BE falling from 4.877 to 2.087 Mbit/s.
+This is a large throughput trade-off, not a free improvement.
+
+D/G/H use EDF in every slot and exactly match its scientific metrics. Their gains over
+Predictive demonstrate abstention, not a better allocator than EDF. F has a small
+-.257 pp Robust-minus-EDF difference with marginal CI [-.486,-.049]; interpret it
+cautiously given multiplicity and the negligible throughput/fairness differences.
+A/B show no clear interval-supported gain over Predictive. All conditions remain reported.
+
+### Forecast and calibration diagnostics
+
+| Condition | Learned MAE dB | Persistence MAE dB | Learned skill | Observable q90 coverage % |
+|---|---:|---:|---:|---:|
+| A-normal | 0.980 | 1.075 | 0.089 | 88.7 |
+| B-pressure | 0.977 | 1.091 | 0.106 | 89.1 |
+| C-blockage | 1.128 | 1.116 | -0.010 | 86.1 |
+| D-mobility | 0.967 | 1.078 | 0.103 | 89.0 |
+| E-deterioration | 2.567 | 2.205 | -0.161 | 75.3 |
+| F-layout-shift | 2.867 | 1.039 | -1.775 | 58.5 |
+| G-measurements | 1.997 | 3.567 | 0.441 | 36.8 |
+| H-combined | 5.211 | 1.403 | -2.766 | 44.2 |
+
+MAE/RMSE use true future SINR offline; observable coverage uses the eventual delayed
+noisy sample. Forecast diagnostics include the post-history warmup prefix and exclude
+drain. Nominal q90 coverage is empirical, not a conformal guarantee. Observed coverage
+falls sharply in F/G/H. D still has useful learned forecast skill but falls back 100%:
+the feature envelope flags speed shift even when prediction remains useful. This
+illustrates conservative false alarms. Confidence-group error rows are preserved
+as descriptive diagnostics, without treating correlated slot samples as independent.
+
+### Ablation and timing
+
+The no-adaptation policy disables risk-driven switching and retains invalid-forecast
+EDF protection. Its performance is close to original Predictive, isolating the gate
+rather than a changed predictive score. See all paired ablation intervals in the
+[comparison table](../examples/robust_scheduling_v2/full/paired_comparisons.csv).
+Persistence and Reactive match all non-timing metrics in all 240 final trace pairs.
+
+Descriptive mean scheduler timing: Robust 203.1 µs; EDF 157.1 µs; Predictive 255.4 µs.
+Robust is 1.29× EDF and .80× Predictive; cheaper EDF mode explains the latter.
+Mean within-episode P99: Robust 369.2 µs, EDF 257.1 µs, Predictive 485.6 µs.
+Batch inference is excluded and separately recorded. Worker contention and Python
+overheads preclude real-time RAN claims. The recorded campaign orchestration time
+was 392.7 seconds before report rendering. All data and regenerated
+statistics were checked for consistency; no final run failed.
+
+### Artifacts and limits
+
+[New full report](../examples/robust_scheduling_v2/full/REPORT.md),
+[new raw episode metrics](../examples/robust_scheduling_v2/full/episode_metrics.csv),
+[summary figure](../examples/robust_scheduling_v2/full/figures/main_findings.png), and
+[deterioration fallback illustration](../examples/robust_scheduling_v2/full/figures/fallback_deterioration.png).
+The supplement uses the first predeclared E episode, not an episode chosen for favorable results.
+It is reproduced by scripts/plot_fallback.py without changing frozen scientific settings.
+
+Historical evidence remains unchanged. Synthetic channels, physical-completion queue
+eligibility, short episodes, conditional latency and uncalibrated confidence remain
+limitations. No industrial reliability, 3GPP conformance, novelty or robot safety claim follows.

@@ -2,8 +2,11 @@
 
 For the v0.2 robustness extension, see [robust scheduling](ROBUST_SCHEDULING.md)
 and the [new evaluation protocol](EXPERIMENT_PROTOCOL.md). Historical numerical
-results below remain preserved and are labeled as prior evidence.
+results in the original sections remain preserved as prior evidence; the new v0.2
+sections are labeled separately.
 
+
+## Historical v0.1 model and protocol
 
 ## Model and units
 
@@ -225,3 +228,14 @@ before test results were inspected; no tuning is justified by those test results
 An 800-slot window is a bounded portfolio benchmark, not evidence of stationary
 long-duration queueing performance. Warmup/duration convergence studies are future
 work. Full status and actual runtime appear in PROJECT_STATUS and manifests.
+
+## Version 0.2 methods
+
+The original system model and allocator equations above remain unchanged. New causal
+measurement timestamps, observable-residual monitoring, training-feature envelopes and
+Predictive/EDF switching are defined in [ROBUST_SCHEDULING](ROBUST_SCHEDULING.md).
+[EXPERIMENT_PROTOCOL](EXPERIMENT_PROTOCOL.md) defines the new splits, freeze, eight
+conditions, matched comparisons, integrated mechanism ablation and audit limitations.
+Whole-episode retry-chunk attempts are now recorded separately from all chunk attempts.
+New raw summaries retain every secondary metric and compare both BE and fairness
+Pareto trade-offs descriptively; no optimality or safety guarantee follows.

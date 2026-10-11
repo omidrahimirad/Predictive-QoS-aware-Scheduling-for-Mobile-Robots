@@ -43,3 +43,21 @@ validated MCS/BLER/TBS, total-power constraints, correlated measurement uncertai
 calibrated interval prediction, ns-3/5G-LENA cross-checks, and communication-control
 co-design. RL and AoI require separate hypotheses, baselines, and semantics before
 being added. They are not implemented features of this version.
+
+## Additional v0.2 limitations
+
+The robust gate uses mean observable residuals and a univariate training envelope;
+it is not a calibrated uncertainty distribution. A global maximum over UEs can keep
+the whole slot in EDF, especially under higher speed or observation delay. That
+behavior can reduce BE throughput even when the forecast remains useful. Residual
+monitoring detects outages only after noisy delayed measurements expose them.
+The empirical q90 band has no distribution-free or OOD coverage guarantee.
+
+Development found no feasible threshold meeting aggregate BE >= .9 of PF. The selected
+threshold follows the declared deficit rule. Final-study evidence must be interpreted
+as a reliability-throughput trade-off, not successful constrained optimization.
+Many marginal comparisons and eight synthetic conditions cannot establish broad robustness.
+
+The queue engine withdraws physical completions before ACK maturity, although PF rates
+wait for ACKs. This retained shared abstraction limits a fully transmitter-causal queue
+claim; correcting it requires distinct new campaigns. Historical artifacts stay unchanged.
